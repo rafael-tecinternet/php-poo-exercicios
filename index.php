@@ -10,25 +10,35 @@
     <h1>Exercício 1</h1>
 <?php
 require_once "src/Livro.php";
-$livro = new Livro;
-$livro2 = new Livro;
+require_once "src/Tecnico.php";
+require_once "src/Programacao.php";
+require_once "src/Didatico.php";
+
+$livro = new Tecnico;
+$livroB = new Programacao;
+$livroC = new Didatico;
 
 $livro->setTitulo("A casa de papel");
 $livro->setAutor("Joaquim.M.Neto");
 $livro->setPaginas(85);
+$livro->setFormato(['digital']);
 
-$livro2->setTitulo("Rua sem saida");
-$livro2->setAutor("M.Neto Filho");
-$livro2->setPaginas(350);
+$livroB->setTitulo("Digital web");
+$livroB->setAutor("Joaquim.M.Neto");
+$livroB->setPaginas(350);
+$livroB->setFormato(['fisico']);
+$livroB->setArea("Web");
+
+$livroC->setTitulo("Aplicando numeros");
+$livroC->setAutor("Monqui.D.Lugy");
+$livroC->setPaginas(1000);
+$livroC->setFormato(['digital']);
+$livroC->setNivel(['médio']);
+$livroC->setDisciplina("Matemática");
+
+
 ?>
-<h2>Dados:</h2>
-    <h3><?=$livro->getTitulo()?></h3>
-    <p><?=$livro->getAutor()?></p>
-    <p><?=$livro->getPaginas()?></p>
-
-    <h3><?=$livro2->getTitulo()?></h3>
-    <p><?=$livro2->getAutor()?></p>
-    <p><?=$livro2->getPaginas()?></p>
+<pre><?=var_dump($livro, $livroB, $livroC)?></pre>
 
 </body>
 </html>
