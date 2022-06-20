@@ -9,7 +9,7 @@
 <body>
     <h1>Exercício 1</h1>
 <?php
-require_once "src/Livro.php";
+
 require_once "src/Tecnico.php";
 require_once "src/Programacao.php";
 require_once "src/Didatico.php";
