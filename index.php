@@ -7,16 +7,14 @@
     <title>Exercício PHP - POO</title> 
 </head>
 <body>
-    <h1>Exercício 1</h1>
+    <h1>Exercício 4</h1>
 <?php
-
-require_once "src/Tecnico.php";
-require_once "src/Programacao.php";
-require_once "src/Didatico.php";
-
-$livro = new Tecnico;
-$livroB = new Programacao;
-$livroC = new Didatico;
+require_once "vendor/autoload.php";
+// Usando as classes a partir de um namespace comum.
+$livro = new  Src\Tecnico;
+$livroB = new Src\Programacao;
+$livroC = new Src\Didatico;
+$livroWeb = new Src\Web;
 
 $livro->setTitulo("A casa de papel");
 $livro->setAutor("Joaquim.M.Neto");
